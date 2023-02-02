@@ -134,7 +134,7 @@
 </ul>
 
 
-<form name="form1" action="addNewPatient.html" method="POST" onsubmit="return validate()">
+<form name="form1" id="formID" action="addNewPatient.html" method="POST" onsubmit="return validate()">
     <fieldset>
     <legend><h3>Add patient</h3></legend>
     
@@ -174,7 +174,7 @@
       <label for="email">Email address:</label>
       <input type="email" id="email" name="email" value="" accesskey="e" onblur="validateEmail(this.id)"><br><br>
     
-       <input type="submit" value="Add patient" accesskey="s" >
+       <input type="submit" onclick="func(); return false;" value="Add patient" accesskey="s" >
      </fieldset>
    </form>
 </main>

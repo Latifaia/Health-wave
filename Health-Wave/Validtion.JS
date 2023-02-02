@@ -103,3 +103,14 @@ element.focus();
 return false;
 }
 }
+
+
+function func() {
+  var x = document.getElementById("formID");
+  alert("Name:"+x.nameid.value+"\nNational ID:"+x.id.value+"\nDate Of Birth:"+x.dob.value+"\nGender:"+
+  x.gender.value+"\nMarital status:"+x.Mstatus.value+"\nInsurance company:"+x.InCom.value+"\nAddress:"+
+  x.address.value+"\nPrimary Mobile Number:"+x.mobileNo.value+"\nSecondary Mobile Number:"+x.SecMobileNo.value+
+  "\nEmail address:"+x.email.value);
+
+
+}
