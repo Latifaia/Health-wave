@@ -107,10 +107,24 @@ return false;
 
 function func() {
   var x = document.getElementById("formID");
-  alert("Name:"+x.nameid.value+"\nNational ID:"+x.id.value+"\nDate Of Birth:"+x.dob.value+"\nGender:"+
-  x.gender.value+"\nMarital status:"+x.Mstatus.value+"\nInsurance company:"+x.InCom.value+"\nAddress:"+
-  x.address.value+"\nPrimary Mobile Number:"+x.mobileNo.value+"\nSecondary Mobile Number:"+x.SecMobileNo.value+
-  "\nEmail address:"+x.email.value);
+
+  
+ 
+document.getElementById("displayName").innerHTML="Name:"+x.nameid.value;
+
+document.getElementById("displayID").innerHTML="National ID:"+x.id.value;
+
+document.getElementById("displayDOB").innerHTML="Date Of Birth:"+x.dob.value;
+document.getElementById("displayGender").innerHTML="Gender:"+x.gender.value;
+document.getElementById("displayMS").innerHTML="Marital status:"+x.Mstatus.value;
+document.getElementById("displayIC").innerHTML="Insurance company:"+x.InCom.value;
+document.getElementById("displayAddress").innerHTML="Address:"+x.address.value;
+document.getElementById("displayMobileNum").innerHTML="Primary Mobile Number:"+x.mobileNo.value;
+document.getElementById("displaySecondaryNum").innerHTML="Secondary Mobile Number:"+x.SecMobileNo.value;
+document.getElementById("displayEmail").innerHTML="Email address:"+x.email.value;
 
 
 }
+
+
+
