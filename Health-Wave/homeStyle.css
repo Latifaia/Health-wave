@@ -239,4 +239,15 @@ input[type="radio"]{
 /*End chart*/
 
 
+@media screen and (max-width:600px){
 
+h1{
+font-size:20px;
+}
+
+img{
+width:200px;
+height:200px;
+
+}
+}
