@@ -6,9 +6,10 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="ER.css">
 	<link rel="Stylesheet" href="GeneralStyle.CSS">
+	<script src="ER.js"></script>
 </head>
 
-<body>
+<body onload="date();">
 
 <header id="menue"> <!--menue bar-->
 <div>
@@ -123,11 +124,12 @@
 </header> <!--End menue bar-->
 
 <main>
-    
+ 
      <ul class="breadcrumb">
           <li><a href="index.html">Home</a></li>
           <li><a href="ER.html">ER</a></li>
      </ul>
+     <h2 id="date"></h2>
     <table>
      <caption>Weekly shift schedule</caption>
      <tr>

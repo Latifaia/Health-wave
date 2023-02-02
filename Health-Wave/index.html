@@ -5,9 +5,10 @@
  <link rel="Stylesheet" href="GeneralStyle.CSS">
 <link rel="Stylesheet" href="homeStyle.CSS">
 	<meta name="generator" content="BBEdit 14.6" />
+	<script src="general.js"></script>
 </head> <!-- End Head--> 
 
-<body>
+<body class="container">
 
 <header> 
 
@@ -17,9 +18,14 @@
   </div>
  
  </header> 
-
+ 
+<div class="themes">
+    <div class="theme" onclick="changeTheme('light')"></div>
+    <div class="theme" onclick="changeTheme('dark')"></div>
+    <div class="theme" onclick="changeTheme('red')"></div>
+</div>
   
-<main>  <!--Main-->
+<main class="container">  <!--Main-->
 
  <ul class="breadcrumb">
       <li><a href="index.html">Home</a></li>
