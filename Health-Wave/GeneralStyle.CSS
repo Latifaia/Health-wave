@@ -150,7 +150,7 @@ height:auto;
   background-color: #cfebf9;
 }
 .themes .theme:nth-child(2) {
-  background-color: #444444;
+  background-color: #777F8C;
 }
 /*.themes .theme:nth-child(3) {
   background-color: rgb(57, 2, 2);
@@ -179,7 +179,7 @@ svg {
   --text: #333;
 }
 .dark {
-  --bg-color: #444444;
+  --bg-color: #777F8C;
   --text: #ddd;
   --svg: #444444;
 }
