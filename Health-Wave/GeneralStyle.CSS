@@ -43,7 +43,13 @@ header img {
 display:flex;
 margin:-160px -30px -30px 0px;
 padding: 0 50px;
+max-width:90%;
+ @media (max-width: 390px){
+width:10%;
+height:5%;
+float:left;
 
+     }
 }
 
 
@@ -150,7 +156,7 @@ height:auto;
   background-color: #cfebf9;
 }
 .themes .theme:nth-child(2) {
-  background-color: #777F8C;
+  background-color: #444444;
 }
 /*.themes .theme:nth-child(3) {
   background-color: rgb(57, 2, 2);
@@ -179,7 +185,7 @@ svg {
   --text: #333;
 }
 .dark {
-  --bg-color: #777F8C;
+  --bg-color: #444444;
   --text: #ddd;
   --svg: #444444;
 }
