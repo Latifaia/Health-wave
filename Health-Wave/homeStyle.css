@@ -244,14 +244,23 @@ input[type="radio"]{
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+@media(max-width:390px){
+>>>>>>> Stashed changes
 =======
 @media(max-width:390px){
 >>>>>>> Stashed changes
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 
+=======
+img{
+max-width:100%;
+margin:100%;
 =======
 img{
 max-width:100%;
@@ -260,4 +269,39 @@ margin:100%;
 }
 
 
+/*
+ @media (max-width: 360px){
+     display:flex;
+     flex-direction: column
 
+    
+    .wrapper{
+    position:absolute;
+    overflow:hidden;
+    width:5%;
+    
+    }
+
+.pie-wrap{
+position:relative;
+top:10%;
+right:15%;
+bottom:190%;
+width:150%;
+>>>>>>> Stashed changes
+}
+
+.key-wrap{
+position:absolute;
+top:290%;
+left:70%;
+height:50%;
+}
+
+
+<<<<<<< Updated upstream
+
+=======
+ }
+    */
+>>>>>>> Stashed changes
