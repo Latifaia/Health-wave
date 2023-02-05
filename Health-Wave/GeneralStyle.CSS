@@ -153,7 +153,7 @@ height:auto;
 }
 
 /*themes*/
-.themes {
+/*.themes {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -190,6 +190,19 @@ svg {
    color:var(--svg);
 }
 
+:root,
+:root.light {
+  --bg-color: #fff;
+  --bg-color1: #2cb0dc ;
+  --text-color: #08376B;
+}
+
+:root.dark {
+  --bg-color:#4e4e4e;
+  --bg-color1: #00526e  ;
+  --text-color: #000000;
+}
+
 /*.container {
   width: min(100% - 2rem, 1200px);
   margin-top: 80px;
@@ -198,7 +211,7 @@ svg {
   padding: 20px;
 }*/
 
-:root {
+/*:root {
   --bg-color: #cfebf9;
   --text: #333;
 }
@@ -206,7 +219,7 @@ svg {
   --bg-color: #444444;
   --text: #ddd;
   --svg: #444444;
-}
+}*/
 /*.red {
   --bg-color: rgb(57, 2, 2);
   --secondary: rgb(102, 23, 23);
