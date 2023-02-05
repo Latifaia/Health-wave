@@ -6,7 +6,7 @@ var address = document.form1.address;
 var mobileNumber = document.form1.mobileNo;
 var SecMobileNumber = document.form1.SecMobileNo;
 var emailVar = document.form1.email;
-
+var file = document.getElementById("photo");
 if(nameVar.value.length <=0) {
 alert("Please enter the name");
 nameVar.focus();
@@ -51,7 +51,11 @@ nameVar.focus();
 return false;
 }
 
+if(file.files.length == 0 ){
+    errors.push("Please select the patient photo!");
+    return false;
 
+  }
 
 
 }
@@ -105,6 +109,26 @@ alert("Enter correct Email");
 element.focus();
 return false;
 }
+}
+
+window.addEventsListener('load' ,function()){
+
+//check if image uploaded
+
+if(this.files && this.files[0]){
+
+document.querySelector('input[type="file"]').addEventListener('change',function()){
+
+var img = document.getElementById("printImg");
+img.src=URL.createObjectURL(this.files[0]);
+img.onload = imgLoaded;
+}
+}
+
+}
+
+function imageIsLoaded(e){
+alert(e);
 }
 
 
