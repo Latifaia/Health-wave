@@ -43,31 +43,9 @@ header img {
 display:flex;
 margin:-160px -30px -30px 0px;
 padding: 0 50px;
-<<<<<<< Updated upstream
 max-width:90%;
- @media (max-width: 390px){
-width:10%;
-height:5%;
-float:left;
 
-<<<<<<< Updated upstream
-=======
-/*
-=======
-
->>>>>>> Stashed changes
- @media (max-width: 390px){
-    
-    img{
-    max-width:100%;
-    height:300%;
-<<<<<<< Updated upstream
-    }*/
->>>>>>> Stashed changes
-=======
-    }
->>>>>>> Stashed changes
-     }
+  
 }
 
 
@@ -227,3 +205,25 @@ svg {
 }*/
 
 /*End Footer*/
+
+@media(max-width:390px)   {
+  
+  html{
+  font-size:70%;
+  }
+  header img  {
+  max-width:100%;
+margin-top:-50px;
+margin-right:100px;
+margin-left:-30px;
+padding-top:20px;
+  }
+  
+  header div{
+  min-height:3rem;
+  display:flex;
+  flex-direction:column;
+  
+  
+  }
+  }
