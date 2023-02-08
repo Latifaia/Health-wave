@@ -6,7 +6,9 @@
 	<meta charset="utf-8">
 	<link rel="Stylesheet" href="GeneralStyle.CSS">
 	<link rel="stylesheet" href="addNewPatient.css">
-	<script src="Validtion.JS"></script>
+<!--	 <script src="Validtion.JS"></script>   -->
+	<script src="v.JS"></script>  
+
 	<script src="general.js"></script>
 </head>
 
@@ -135,18 +137,19 @@
 </ul>
 
 
-<form name="form1" id="formID" action="addNewPatient.html" method="POST" onsubmit="return validate()">
+<form name="form1" id="formID" action="addNewPatient.html" method="POST" onsubmit="return validate();">
     <fieldset>
     <legend><h3>Add patient</h3></legend>
     
       <label for="photo">Photo:</label>
      <input  type="file"  id="photo"  name="photo"><br><br>
-     <img src="" id="printImg" width="150" height="150">
+    <!-- <img src="" id="printImg" width="150" height="150">   -->
     
       <label for="name">Name:</label>
-      <input type="text" id="nameid" name="name" value="" accesskey="n" onblur="validateString(this.id)"><br><br>
+      <input type="text" id="nameid" name="name" value="" accesskey="n" ><br><br>
+      <!--onblur="validateString(this.id)"-->
       <label for="id">National ID:</label>
-      <input type="text" id="id" name="id" accesskey="i" onblur="validateNumber(this.id)"><br><br>
+      <input type="text" id="id" name="id" accesskey="i" ><br><br>
       <label for="dob">D.O.B:</label>
       <input type="date" id="dob" name="dob" accesskey="d"><br><br>
       
@@ -168,18 +171,21 @@
       <h3>Contact Information</h3>
       
       <label for="mobileNo">Primary Mobile Number:</label>
-      <input type="tel" id="mobileNo" name="mobileNo" accesskey="m" onblur="validateMobileNumber(this.id)"><br><br>
+      <input type="tel" id="mobileNo" name="mobileNo" accesskey="m" ><br><br>
       
       <label for="SecMobileNo">Secondary  Mobile Number:</label>
-      <input type="tel" id="SecMobileNo" name="SecMobileNo" accesskey="u" onblur="validateSecMobileNumber(this.id)"><br><br>
+      <input type="tel" id="SecMobileNo" name="SecMobileNo" accesskey="u" ><br><br>
       
       <label for="email">Email address:</label>
-      <input type="email" id="email" name="email" value="" accesskey="e" onblur="validateEmail(this.id)"><br><br>
+      <input type="email" id="email" name="email" value="" accesskey="e" ><br><br>
     
-       <input type="submit" onclick="func(); return false;" value="Add patient" accesskey="s" >
+       <input type="submit"  value="Add patient" accesskey="s" onclick="func(); return false;" >
+       
+       <!--onclick="func(); return false;"-->
      </fieldset>
    </form>
    <div id="display">
+        <div id="display_image"></div>
    <p id="displayName"></p>
    <p id="displayID"></p>
    <p id="displayDOB"></p>
