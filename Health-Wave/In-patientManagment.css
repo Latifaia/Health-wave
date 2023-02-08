@@ -35,7 +35,7 @@ margin-right:270px;
 }
 
 .flexbox div{
-background-color: #f1f1f1;
+background-color: var(--divcolor);
 margin: 10px;
 padding: 20px;
 font-size: 30px;
