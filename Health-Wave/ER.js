@@ -28,5 +28,4 @@ var firstday = new Date(curr.setDate(first));
 //firstday =  firstday.getFullYear()+'/'+(firstday.getMonth()+1)+'/'+firstday.getDate(); 
 firstday = firstday.getDate()+' / '+(firstday.getMonth()+1)+' / '+firstday.getFullYear();
 document.getElementById("date").innerHTML = firstday;
-
 }
