@@ -6,6 +6,7 @@
             <link rel="Stylesheet" href="DoctorsStyle.css">
             <link rel="Stylesheet" href="GeneralStyle.CSS">
             <script src="general.js"></script>
+            <script src="doctors.js"></script>
 
     </head> <!-- End Head--> 
     
@@ -133,46 +134,55 @@
               <li><a href="Doctors.html">Doctors</a></li>
             </ul>
             
-            <div class ="DoctorsHeader">
-               
-                <h1 >Doctors</h1>
-                <h3>          
-                    <label class ="DoctorsSorting">Sort:</label>
-                        <select name="EightiesFave">
-                            <option> alphabetically </option>
-                            <option> by department</option>
-                        </select>     
-                </h3>
-                
-            </div>
+        <div class="doc-head">
+    <h2> Doctors list </h2>
+    <label>sort by</label>
+    <select name="Doctors" onchange="myFunction1(this); return false;">
+    <option value="department">department</option>
+    <option value="alphabiticly">alphabiticly</option>
+    </select>
+    </div> 
+  
             
-            <div class="flex-container">
+            <div class="doctorsList">
+            <ul id="realList"> 
+            <li>
               <div>
+               <h3> Dr.<span id="DrNames">Noura Alhassan </span><br>
+             <span id="dep"> Cardiology </span> </h3>
                   <img src="images/1.png" alt="Doctor pic" width="200" height="200">
-                  <p>Dr.Nora Ibrahim</p>
-                <p class ="Department">Department of plastic surgery</p>
                   <p><button onclick="">Evaluate</button></p>
               </div>
-              <div>
-                  <img src="images/2.png" alt="Doctor pic" width="200" height="200">
-                  <p>Dr.Ahmad Ibrahim</p>
-                  <p class ="Department">Department of Surgery</p>
-                  <p><button onclick="">Evaluate</button></p>
-              </div>
-              <div>
-                  <img src="images/3.png" alt="Doctor pic" width="200" height="200">
-                  <p>Dr.Marwa Mohammed</p>
-                  <p class ="Department">Department of psychiatry</p>
-                  <p><button onclick="">Evaluate</button></p>
-              </div>
-              <div>
-                <img src="images/4.png" alt="Doctor pic" width="200" height="200">
-                  <p>Dr.Deema Bader </p>
-                 <p class ="Department">Department of eye</p>
-                  <p><button onclick="">Evaluate</button></p>
-              </div>
-            </div>  
+            </li>
             
+            <li>
+              <div>
+               <h3> Dr.<span id="DrNames">Ahmad Ibrahim</span> <br>
+             <span id="dep"> Ophthalmology </span>  </h3>
+                  <img src="images/2.png" alt="Doctor pic" width="200" height="200">
+                  <p><button onclick="">Evaluate</button></p>
+              </div>
+              </li>
+              
+              <li>
+              <div>
+              <h3> Dr. <span id="DrNames">Marwa Mohammed</span> <br>
+             <span id="dep"> Cardiology </span> </h3>
+                  <img src="images/3.png" alt="Doctor pic" width="200" height="200">
+                  <p><button onclick="">Evaluate</button></p>
+              </div>
+              </li>
+              
+              <li>
+              <div>
+              <h3> Dr. <span id="DrNames">Lama Bader</span> <br>
+             <span id="dep"> Surgery </span> </h3>
+                <img src="images/4.png" alt="Doctor pic" width="200" height="200">
+                  <p><button onclick="">Evaluate</button></p>
+              </div>
+              </li>
+              </ul>
+            </div>  
         </main>
 
 

@@ -9,7 +9,7 @@
           {
            text-align:left;
           }
-    .flex-container {
+    /*.doctorsList{
                       display: flex;
                       flex-wrap: wrap;
                       justify-content: space-around;
@@ -17,9 +17,10 @@
                     align-content: space-around;
                       background-color: var(--fcolor);
                       flex-wrap: wrap;
-                    }
+                      float: left;      
+                    }*/
 
-    .flex-container > div {
+    .doctorsList > div {
                       background-color: var(--f1color);
                       margin: 10px;
                       padding: 20px;
