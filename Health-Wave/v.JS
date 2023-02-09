@@ -1,5 +1,5 @@
 var val=[ ];
-
+var flag =0;
 function validate() {
   event.preventDefault();
 
@@ -35,7 +35,7 @@ val.push("Please enter the National ID!");
 }
 
 var numbers =/^[0-9]{10}$/;
-if(!numbers.test(nationalID.value)) {
+if(!numbers.test(nationalID) && !nationalID.length == 0) {
 val.push("Enter correct National ID , should be 10 digits");
 }
 
@@ -68,11 +68,6 @@ val.push("Please enter Email!");
 
 
 
-var emailPattren =/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-if(!emailPattren.test(emailVar.value) && !emailVar.length ==0) {
-val.push("Enter correct Email");
-}
-
 if(file.files.length == 0 ){
     val.push("Please select the patient photo!");
   }
@@ -85,20 +80,24 @@ if(val.length > 0) {
      
      }
     
-  alert(errorMessage);
+    if(!errorMessage.length == 0){
+               alert(errorMessage);
+               flag=1;
   return false;
+
+    }
+         
   
 
 }
 
 function func() {
 
-if(val.length > 0) {
+if(val.length > 0 || flag == 0) {
   var x = document.getElementById("formID");
 
 //display image
 
- //document.getElementById("display_image").innerHTML="Photo:"+imageDis();
 document.getElementById("displayName").innerHTML="Name:"+x.nameid.value;
 
 document.getElementById("displayID").innerHTML="National ID:"+x.id.value;
