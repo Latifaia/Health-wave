@@ -1,30 +1,36 @@
+var val=[ ];
 
-/*
 function validate() {
-  //event.preventDefault();
+  event.preventDefault();
 
-var val=[];
-var nameVar = document.form1.nameid;
-var nationalID = document.form1.id;
-var insuranceCompany = document.form1.InCom;
-var address = document.form1.address;
-var mobileNumber = document.form1.mobileNo;
-var SecMobileNumber = document.form1.SecMobileNo;
-var emailVar = document.form1.email;
-//var file = document.getElementById("photo");
+var nameVar = document.form1.name.value;
 
-if(nameVar.value.length <=0) {
+
+var nationalID = document.form1.Nid.value;
+
+var insuranceCompany = document.form1.InCom.value;
+
+var address = document.form1.address.value;
+
+var mobileNumber = document.form1.mobileNo.value;
+var SecMobileNumber = document.form1.SecMobileNo.value;
+
+var emailVar = document.form1.email.value;
+
+var file = document.getElementById("photo");
+
+if(nameVar.length == 0) {
 val.push("Please enter the name!");
 }
 
-var letters =/^[a-zA-Z ]+$/;
-if(!letters.test(nameVar.value)) {
+var letters =/^[a-zA-Z]+$/;
+if(!letters.test(nameVar) && !nameVar.length == 0) {
 val.push("Enter correct name!");
 }
 
 
 
-if(nationalID.value.length <=0) {
+if(nationalID.length == 0) {
 val.push("Please enter the National ID!");
 }
 
@@ -33,38 +39,37 @@ if(!numbers.test(nationalID.value)) {
 val.push("Enter correct National ID , should be 10 digits");
 }
 
-if(insuranceCompany.value.length <=0) {
+if(insuranceCompany.length ==0) {
 val.push("Please enter the insurance-company!");
 }
 
-if(address.value.length <=0) {
+if(address.length ==0) {
 val.push("Please enter the address!");
 }
 
-if(mobileNumber.value.length <=0) {
+if(mobileNumber.length ==0) {
 val.push("Please enter the mobile Number!");
 }
 
 var mobNum =/^[0-9]{10}$/;
-if(!mobNum.test(mobileNumber.value)) {
+if(!mobNum.test(mobileNumber)&& !mobileNumber.length ==0 ) {
 val.push("Enter correct Mobile number, should be 10 digits ");
 }
 
-if(SecMobileNumber.value.length <=0) {
+
+if(SecMobileNumber.length ==0 && !mobNum.test(SecMobileNumber)) {
 val.push("Please enter the Secondary Mobile Number!");
 }
-if(mobileNo.value!=secMobileNo.value) {
-val.push("Enter correct Secondary Mobile Number!");
-}
 
-if(emailVar.value.length <=0) {
+
+if(emailVar.length ==0) {
 val.push("Please enter Email!");
 }
 
 
 
 var emailPattren =/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-if(!emailPattren.test(emailVar.value)) {
+if(!emailPattren.test(emailVar.value) && !emailVar.length ==0) {
 val.push("Enter correct Email");
 }
 
@@ -72,73 +77,59 @@ if(file.files.length == 0 ){
     val.push("Please select the patient photo!");
   }
 
-if(val.length>=0) {
-/*
- var i = 0
+if(val.length > 0) {
+
   var errorMessage = "";
-  for(i; i<val.length ; i++) {
-     errorMessage+=val[i]+"\n";
-     */
-     */
- /*    
-displayError(val);
-  }
+  for(var i = 0 ; i<val.length ; i++) 
+     errorMessage+= val[i]+"\n";
+     
+     }
     
- // alert(errorMessage);
+  alert(errorMessage);
   return false;
   
 
 }
 
+function func() {
 
-function displayError(arr) {
-  var errorMessage = "";
-for(var i = 0; i<arr.length;i++)
-     errorMessage+=val[i]+"\n";
-     
-     alert(errorMessage);
+if(val.length > 0) {
+  var x = document.getElementById("formID");
+
+//display image
+
+ //document.getElementById("display_image").innerHTML="Photo:"+imageDis();
+document.getElementById("displayName").innerHTML="Name:"+x.nameid.value;
+
+document.getElementById("displayID").innerHTML="National ID:"+x.id.value;
+
+
+document.getElementById("displayDOB").innerHTML="Date Of Birth:"+x.dob.value;
+document.getElementById("displayGender").innerHTML="Gender:"+x.gender.value;
+document.getElementById("displayMS").innerHTML="Marital status:"+x.Mstatus.value;
+document.getElementById("displayIC").innerHTML="Insurance company:"+x.InCom.value;
+document.getElementById("displayAddress").innerHTML="Address:"+x.address.value;
+document.getElementById("displayMobileNum").innerHTML="Primary Mobile Number:"+x.mobileNo.value;
+document.getElementById("displaySecondaryNum").innerHTML="Secondary Mobile Number:"+x.SecMobileNo.value;
+document.getElementById("displayEmail").innerHTML="Email address:"+x.email.value;
+
+document.getElementById("image-preview").hidden = false;
+ var input = document.getElementById("photo");
+ var preview = document.getElementById('image-preview');
+  
+      var reader = new FileReader();
+      reader.onload = function() {
+        preview.src = reader.result;
+      }
+  
+      if (input.files && input.files[0]) {
+        reader.readAsDataURL(input.files[0]);
+      }
+}
+
 
 }
- 
-*/
-function validationFunc() {
-  event.preventDefault();
-  var errors=[];
-  var ffname=document.form1.nameid.value;
-  var fsname=document.form1.id.value;
-  
-   
-  if(ffname=="" || ffname==null) 
-  {
-    errors.push("Please provide the First name!");
-  }
-  if(fsname==""|| fsname==null) 
-  {
-    errors.push("Please provide last name!");
-  }
-     if(/^[0-9]/.test(ffname)) 
-     {
-      errors.push("Error: First name can't include invalid characters!");
-     }
-     if(/^[0-9]/.test(fsname)) 
-     {
-      errors.push("Error: Last name can't include invalid characters!");
-     }
-   if(fnid=="" || fnid==null)
-   {
-    errors.push("Please provide the National ID!");
-   }
-   if(!fnid ==null || !fnid =="" && !/^\d{10}$/.test(fnid)) 
-     {
-      errors.push("Error: National ID must include 10 digits!");
-     }
-    
-   if(errors.length > 0)
-   {
-    var i=0;
-    var msgAlert="";
-    for (i; i<errors.length; i++)
-    msgAlert +=errors[i]+"\n";
-    alert(msgAlert);
-    return false;
-   }
+
+
+
+
