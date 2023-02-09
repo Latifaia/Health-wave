@@ -143,7 +143,7 @@
     
       <label for="photo">Photo:</label>
      <input  type="file"  id="photo"  name="photo"><br><br>
-    <!-- <img src="" id="printImg" width="150" height="150">   -->
+
     
       <label for="name">Name:</label>
       <input type="text" id="nameid" name="name" value="" accesskey="n" ><br><br>
@@ -179,13 +179,14 @@
       <label for="email">Email address:</label>
       <input type="email" id="email" name="email" value="" accesskey="e" ><br><br>
     
-       <input type="submit"  value="Add patient" accesskey="s" >
+       <input type="submit"  value="Add patient" accesskey="s"  onclick="func();">
        
-       <!--onclick="func(); return false;"-->
      </fieldset>
    </form>
    <div id="display">
-        <div id="display_image"></div>
+        <div id="display_image">
+                <img id="image-preview" src="#" alt="image preview" hidden>
+        </div>
    <p id="displayName"></p>
    <p id="displayID"></p>
    <p id="displayDOB"></p>
